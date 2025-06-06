@@ -218,7 +218,7 @@ const AuthInterface: React.FC = () => {
                       : 'border-gray-700'
                     }
                   `}>
-                    <span className="text-vivid-purple pl-3 font-mono">&gt;</span>
+                    <span className="text-vivid-purple pl-3 font-mono">></span>
                     <User className="h-4 w-4 text-gray-500 ml-2" />
                     <input
                       ref={usernameRef}
@@ -243,7 +243,7 @@ const AuthInterface: React.FC = () => {
                     : 'border-gray-700'
                   }
                 `}>
-                  <span className="text-electric-blue pl-3 font-mono">&gt;</span>
+                  <span className="text-electric-blue pl-3 font-mono">></span>
                   <Mail className="h-4 w-4 text-gray-500 ml-2" />
                   <input
                     ref={emailRef}
@@ -267,7 +267,7 @@ const AuthInterface: React.FC = () => {
                     : 'border-gray-700'
                   }
                 `}>
-                  <span className="text-electric-blue pl-3 font-mono">&gt;</span>
+                  <span className="text-electric-blue pl-3 font-mono">></span>
                   <Lock className="h-4 w-4 text-gray-500 ml-2" />
                   <input
                     ref={passwordRef}
@@ -299,7 +299,7 @@ const AuthInterface: React.FC = () => {
                       : 'border-gray-700'
                     }
                   `}>
-                    <span className="text-vivid-purple pl-3 font-mono">&gt;</span>
+                    <span className="text-vivid-purple pl-3 font-mono">></span>
                     <Lock className="h-4 w-4 text-gray-500 ml-2" />
                     <input
                       ref={confirmPasswordRef}
@@ -393,7 +393,7 @@ const AuthInterface: React.FC = () => {
             <p className="text-gray-500 font-mono text-xs">
               REVENANT v4.1 • SECURE NEURAL INTERFACE
             </p>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </div>
