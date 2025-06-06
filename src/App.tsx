@@ -6,9 +6,11 @@ import ControlButtons from './components/ControlButtons';
 import CommandTerminal from './components/CommandTerminal';
 import LogsPanel from './components/LogsPanel';
 import StatusMetrics from './components/StatusMetrics';
+import AuthInterface from './components/AuthInterface';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     // Simulate loading time
@@ -47,6 +49,11 @@ function App() {
         </div>
       </div>
     );
+  }
+
+  // Show authentication interface if not authenticated
+  if (!isAuthenticated) {
+    return <AuthInterface />;
   }
 
   return (

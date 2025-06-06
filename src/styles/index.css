@@ -22,6 +22,13 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.glassmorphism-auth {
+  @apply bg-dark-matter-800 bg-opacity-85 backdrop-blur-lg border border-electric-blue border-opacity-30;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 207, 255, 0.1);
+}
+
 .terminal-text {
   @apply font-mono text-electric-blue;
   text-shadow: 0 0 5px rgba(0, 207, 255, 0.5);
@@ -69,6 +76,18 @@ body {
   animation: scanline 6s linear infinite;
 }
 
+.scanline-auth {
+  @apply w-full h-full absolute top-0 left-0 pointer-events-none opacity-5;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 207, 255, 0) 0%,
+    rgba(0, 207, 255, 0.3) 50%,
+    rgba(0, 207, 255, 0) 100%
+  );
+  background-size: 100% 2px;
+  animation: scanline-auth 8s linear infinite;
+}
+
 @keyframes scanline {
   0% {
     transform: translateY(-100%);
@@ -76,4 +95,52 @@ body {
   100% {
     transform: translateY(100%);
   }
+}
+
+@keyframes scanline-auth {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scanline,
+  .scanline-auth {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+input:focus,
+button:focus {
+  outline: 2px solid #00CFFF;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00CFFF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0091FF;
 }
