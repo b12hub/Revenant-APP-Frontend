@@ -51,3 +51,7 @@ npm install
 npm run dev
 Open your browser to http://localhost:5173
 ```
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).  
+© 2025 [b12hub](https://github.com/b12hub) — Revenant Systems
